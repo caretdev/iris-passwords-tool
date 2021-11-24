@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="passwords-tool.ZPM">
+    <Module>
+      <Name>passwords-tool</Name>
+      <Version>0.0.1</Version>
+      <Keywords>password</Keywords>
+      <Description>Tool to generate strong passwords and check how strong is it</Description>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="caretdev.Passwords.CLS"/>
+      <UnitTest Name="/tests" Package="UnitTest" Phase="test"/>
+    </Module>
+  </Document>
+</Export>
