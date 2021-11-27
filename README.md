@@ -87,27 +87,28 @@ Some another alhorithm of entropy calculation.
 ```ObjectScript
 Set entropy = ##class(caretdev.Passwords).ShannonScore("Pas$W0rD")
 ```
-##Docker installation
+
+## Docker installation
 ### Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 ### Installation 
 Clone/git pull the repo into any local directory
 ```
- git clone https://github.com/intersystems-community/objectscript-docker-template.git
+$ git clone https://github.com/intersystems-community/objectscript-docker-template.git
 ```
 Open the terminal in this directory and run:
 ```
-  set DOCKER_BUILDKIT=1
-  docker compose build
+$ set DOCKER_BUILDKIT=1
+$ docker compose build
 ```
 Run the IRIS container with your project:
 ```
-  docker compose up -d
+$ docker-compose up -d
 ```
 ### How to Test it
 Open IRIS terminal:
-```
+```ObjectScript
 $ docker-compose exec iris iris session iris
-USER>set DOCKER_BUILDKIT=1
+USER>Set password = ##class(caretdev.Passwords).Generate()
 USER>
-
+```
