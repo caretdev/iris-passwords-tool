@@ -161,7 +161,7 @@ ClassMethod Entropy(Password As %String = "", decimal = 2) As %Numeric
     Set combinations = size ** $Length(Password)
   } Catch {
     #; <MAXNUMBER>
-    Set combinations = 1e308
+    Set combinations = 1.7976931348623157081E308 
   }
   
   #; logarithm base 2 
