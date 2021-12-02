@@ -88,25 +88,41 @@ Some another alhorithm of entropy calculation.
 Set entropy = ##class(caretdev.Passwords).ShannonScore("Pas$W0rD")
 ```
 
-## Docker installation
-### Prerequisites
+Docker installation
+---
+
+Prerequisites
+----
+
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
-### Installation 
+
+Installation
+----
+
 Clone/git pull the repo into any local directory
+
+```shell
+git clone https://github.com/caretdev/iris-passwords-tool.git
 ```
-$ git clone https://github.com/caretdev/iris-passwords-tool.git
-```
+
 Open the terminal in this directory and run:
+
+```shell
+set DOCKER_BUILDKIT=1
+docker compose build
 ```
-$ set DOCKER_BUILDKIT=1
-$ docker compose build
-```
+
 Run the IRIS container with your project:
+
+```shell
+docker-compose up -d
 ```
-$ docker-compose up -d
-```
-### How to Test it
+
+How to Test it
+----
+
 Open IRIS terminal:
+
 ```ObjectScript
 $ docker-compose exec iris iris session iris
 USER>Set password = ##class(caretdev.Passwords).Generate()

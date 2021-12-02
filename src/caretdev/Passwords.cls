@@ -82,20 +82,20 @@ ClassMethod CheckRules(Password As %String, IncludeUpperLetter As %Boolean = 0, 
 
 /// Calculates the NIST score
 /// <ul>
-/// <li> The entropy of the first character is four bits;</ii>
+/// <li> The entropy of the first character is four bits;</li>
 /// <li> The entropy of the next seven characters are two bits per
-///      character;</ii>
+///      character;</li>
 /// <li> The ninth through the twentieth character has 1.5 bits of
-///      entropy per character;</ii>
-/// <li> Characters 21 and above have one bit of entropy per character.</ii>
+///      entropy per character;</li>
+/// <li> Characters 21 and above have one bit of entropy per character.</li>
 /// <li> A "bonus" of six bits is added if both upper case letters and
-///      non-alphabetic characters are used.</ii>
+///      non-alphabetic characters are used.</li>
 /// <li> A "bonus" of six bits is added for passwords of length 1 through
 ///      19 characters following an extensive dictionary check to ensure
 ///      the password is not contained within a large dictionary.
 ///      Passwords of 20 characters or more do not receive this bonus
 ///      because it is assumed they are pass-phrases consisting of
-///      multiple dictionary words.</ii>
+///      multiple dictionary words.</li>
 /// <ul>
 ClassMethod NISTScore(Password As %String = "") As %Numeric
 {
